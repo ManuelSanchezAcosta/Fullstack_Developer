@@ -1,0 +1,19 @@
+<div class="container">
+  <h1>Médicos</h1>
+  <table class="table table-hover table-striped">
+    <thead>
+      <tr>
+        <th>Medico</th>
+        <th>CMP</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let medico of httpMedicosService.medicos">
+        <td>{{medico.nombre}}</td>
+        <td>{{medico.cmp}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <button class="btn btn-warning" (click)="mostrarFormulario()">Agregar</button>
+</div>

@@ -1,0 +1,14 @@
+<div class="container">
+  <h1 class="display-3 mt-5">Médicos</h1>
+  <form (ngSubmit)="agregar()" #f="ngForm">
+    <div class="form-group">
+      <input type="text" name="nombre" ngModel required placeholder="Ingrese el nombre">
+    </div>
+    <div class="form-group">
+      <input type="text" name="cmp" ngModel required placeholder="Ingrese el codigo CMP">
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn-success btn-block" [disabled]="!f.valid">Agregar</button>
+    </div>
+  </form>
+</div>
